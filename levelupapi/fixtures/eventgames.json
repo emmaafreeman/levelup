@@ -1,0 +1,26 @@
+[
+  {
+    "model": "levelupapi.event_game",
+    "pk": 1,
+    "fields": {
+      "event": 1,
+      "game": 2
+    }
+  },
+  {
+    "model": "levelupapi.event_game",
+    "pk": 2,
+    "fields": {
+      "event": 2,
+      "game": 1
+    }
+  },
+  {
+    "model": "levelupapi.event_game",
+    "pk": 3,
+    "fields": {
+      "event": 3,
+      "game": 3
+    }
+  }
+]
