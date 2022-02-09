@@ -10,7 +10,6 @@ from rest_framework import serializers
 from levelupapi.models import Game, Event, Gamer
 from levelupapi.views.game import GameSerializer
 
-
 class EventView(ViewSet):
     """Level up events"""
 
@@ -101,8 +100,9 @@ class EventView(ViewSet):
 
         # Set the `joined` property on every event
         for event in events:
+            if gamer in event.attendees.all():
             # Check to see if the gamer is in the attendees list on the event
-            event.joined = gamer in event.attendees.all()
+                event.joined = True
 
         # Support filtering events by game
         game = self.request.query_params.get('gameId', None)
