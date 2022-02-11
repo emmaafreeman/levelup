@@ -3,6 +3,7 @@ from .gametype import Type
 
 
 class Game(models.Model):
+    """Level up game model"""
 
     title = models.CharField(max_length=50, null=True)
     maker = models.CharField(max_length=50, null=True)

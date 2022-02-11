@@ -7,6 +7,7 @@ User = get_user_model()
 
 
 class Gamer(models.Model):
+    """Level up gamer model"""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=50)
